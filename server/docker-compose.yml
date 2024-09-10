@@ -1,0 +1,11 @@
+name: goaly-server
+
+services:
+  pg:
+    image: bitnami/postgresql:14.13.0
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=mingoalymin
+      - POSTGRES_PASSWORD=mingoalymin
+      - POSTGRES_DB=goalydb
