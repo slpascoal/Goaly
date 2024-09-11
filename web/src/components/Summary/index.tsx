@@ -1,9 +1,10 @@
-import { Plus } from 'lucide-react'
+import { CheckCircle2, Plus } from 'lucide-react'
 import { Button } from '../ui/button'
 import { DialogTrigger } from '../ui/dialog'
 import iconGoaly from '../../assets/goaly-icon.svg'
 import { Progress, ProgressIndicator } from '../ui/progress-bar'
 import { Separator } from '../ui/separator'
+import { OutlineButton } from '../ui/outline-button'
 
 const style = {
   width: '20%',
@@ -39,6 +40,47 @@ export function Summary() {
         </div>
 
         <Separator />
+
+        <div className="flex flex-wrap gap-3">
+          <OutlineButton>
+            <Plus className="size-4 text-zinc-600" />
+            Devocional
+          </OutlineButton>
+          <OutlineButton>
+            <Plus className="size-4 text-zinc-600" />
+            Nadar
+          </OutlineButton>
+          <OutlineButton>
+            <Plus className="size-4 text-zinc-600" />
+            Estudar
+          </OutlineButton>
+          <OutlineButton>
+            <Plus className="size-4 text-zinc-600" />
+            Trabalhar
+          </OutlineButton>
+        </div>
+
+        <div className="flex flex-col gap-6">
+          <h2 className="text-xl font-medium">Sua Semana</h2>
+
+          <div className="flex flex-col gap-4">
+            <h3 className="font-medium">
+              Domingo{' '}
+              <span className="text-zinc-400 text-sm">(10 de Agosto)</span>
+            </h3>
+
+            <ul className="flex flex-col gap-3">
+              <li className="flex items-center gap-2">
+                <CheckCircle2 className="size-4 text-pink-500" />
+                <span className="text-sm text-zinc-400">
+                  Você completou "
+                  <span className="text-zinc-100">Acordar cedo</span>" às{' '}
+                  <span className="text-zinc-100">08:13h</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   )
